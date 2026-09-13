@@ -1,1 +1,2611 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <!-- =========================
+         CONFIGURACIÓN BÁSICA
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página se adapte a celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>AronWeb | Diseño y Desarrollo de Páginas Web</title>
+
+    <meta name="description"
+        content="Creamos páginas web modernas, rápidas y profesionales para negocios, emprendedores y marcas. Diseñamos sitios web adaptados a celulares, tablets y computadoras.">
+
+    <meta name="keywords"
+        content="diseño web, páginas web, desarrollo web, páginas web México, diseñador web, sitios web, páginas profesionales">
+
+    <meta name="author" content="AronWeb">
+
+    <!-- Open Graph para compartir la página -->
+    <meta property="og:title" content="AronWeb | Diseño Web Profesional">
+    <meta property="og:description"
+        content="Creamos páginas web modernas y profesionales para hacer crecer tu negocio.">
+    <meta property="og:type" content="website">
+
+    <!-- Color del navegador en celular -->
+    <meta name="theme-color" content="#080b16">
+
+
+    <!-- =========================
+         FUENTES
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         ICONOS
+    ========================== -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================== */
+
+        :root {
+
+            --fondo: #080b16;
+
+            --fondo-secundario: #0d1222;
+
+            --tarjeta: rgba(255,255,255,0.05);
+
+            --borde: rgba(255,255,255,0.10);
+
+            --blanco: #ffffff;
+
+            --gris: #a7afc2;
+
+            --azul: #5b8cff;
+
+            --morado: #8b5cf6;
+
+            --verde: #25d366;
+
+            --gradiente: linear-gradient(
+                135deg,
+                #5b8cff,
+                #8b5cf6
+            );
+        }
+
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            background: var(--fondo);
+
+            color: var(--blanco);
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+
+        /* =========================
+           FONDO ANIMADO
+        ========================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+
+            height: 500px;
+
+            background: #5b8cff;
+
+            opacity: 0.08;
+
+            filter: blur(120px);
+
+            border-radius: 50%;
+
+            top: -150px;
+
+            left: -150px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            width: 450px;
+
+            height: 450px;
+
+            background: #8b5cf6;
+
+            opacity: 0.08;
+
+            filter: blur(120px);
+
+            border-radius: 50%;
+
+            right: -150px;
+
+            bottom: -150px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(20px);
+
+            background: rgba(8,11,22,0.75);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        nav {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            height: 75px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 24px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+        }
+
+
+        .logo span {
+            color: var(--azul);
+        }
+
+
+        .menu {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .menu a {
+
+            color: #cbd2e1;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+
+        .menu a:hover {
+            color: white;
+        }
+
+
+        .nav-button {
+
+            background: var(--gradiente);
+
+            padding: 11px 18px;
+
+            border-radius: 10px;
+
+            color: white !important;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 130px 20px 80px;
+
+            position: relative;
+        }
+
+
+        .hero-content {
+
+            max-width: 900px;
+
+            animation: aparecer 1s ease;
+        }
+
+
+        .etiqueta {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border: 1px solid var(--borde);
+
+            background: rgba(255,255,255,0.04);
+
+            border-radius: 50px;
+
+            color: #b9c5df;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .punto {
+
+            width: 8px;
+
+            height: 8px;
+
+            background: #39e58c;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 15px #39e58c;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(42px, 7vw, 82px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+
+            background: var(--gradiente);
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: var(--gris);
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .hero-buttons {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+
+            padding: 15px 24px;
+
+            border-radius: 12px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            cursor: pointer;
+
+            border: none;
+        }
+
+
+        .btn-primary {
+
+            background: var(--gradiente);
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(91,140,255,0.25);
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 15px 40px rgba(91,140,255,0.4);
+        }
+
+
+        .btn-secondary {
+
+            border: 1px solid var(--borde);
+
+            background: rgba(255,255,255,0.04);
+
+            color: white;
+        }
+
+
+        .btn-secondary:hover {
+
+            background: rgba(255,255,255,0.08);
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================== */
+
+        section {
+
+            padding: 100px 20px;
+        }
+
+
+        .container {
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 60px;
+        }
+
+
+        .section-title small {
+
+            color: var(--azul);
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: clamp(32px, 5vw, 52px);
+
+            margin: 12px 0;
+
+            letter-spacing: -2px;
+        }
+
+
+        .section-title p {
+
+            color: var(--gris);
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           ESTADÍSTICAS
+        ========================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+            margin-top: 60px;
+        }
+
+
+        .stat {
+
+            text-align: center;
+
+            padding: 25px;
+
+            border: 1px solid var(--borde);
+
+            background: var(--tarjeta);
+
+            border-radius: 18px;
+        }
+
+
+        .stat h3 {
+
+            font-size: 30px;
+
+            color: white;
+        }
+
+
+        .stat p {
+
+            color: var(--gris);
+
+            font-size: 13px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           SERVICIOS
+        ========================== */
+
+        .services {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .service {
+
+            padding: 30px;
+
+            border: 1px solid var(--borde);
+
+            background: var(--tarjeta);
+
+            border-radius: 20px;
+
+            transition: 0.4s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .service::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100px;
+
+            height: 100px;
+
+            background: var(--azul);
+
+            opacity: 0;
+
+            filter: blur(50px);
+
+            top: -30px;
+
+            right: -30px;
+
+            transition: 0.4s;
+        }
+
+
+        .service:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(91,140,255,0.4);
+        }
+
+
+        .service:hover::before {
+            opacity: 0.5;
+        }
+
+
+        .icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 15px;
+
+            background: rgba(91,140,255,0.12);
+
+            color: #79a1ff;
+
+            font-size: 22px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 20px;
+        }
+
+
+        .service p {
+
+            color: var(--gris);
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PRECIOS
+        ========================== */
+
+        .pricing {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            align-items: stretch;
+        }
+
+
+        .price-card {
+
+            position: relative;
+
+            padding: 35px 28px;
+
+            border: 1px solid var(--borde);
+
+            background: rgba(255,255,255,0.045);
+
+            border-radius: 24px;
+
+            transition: 0.4s;
+        }
+
+
+        .price-card:hover {
+
+            transform: translateY(-10px);
+
+            border-color: rgba(91,140,255,0.5);
+        }
+
+
+        .price-card.destacado {
+
+            border: 2px solid var(--azul);
+
+            background: linear-gradient(
+                180deg,
+                rgba(91,140,255,0.13),
+                rgba(255,255,255,0.04)
+            );
+
+            transform: scale(1.04);
+        }
+
+
+        .popular {
+
+            position: absolute;
+
+            top: -14px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: var(--gradiente);
+
+            padding: 7px 16px;
+
+            border-radius: 50px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+
+        .price-card h3 {
+            font-size: 22px;
+        }
+
+
+        .price-card .descripcion {
+
+            color: var(--gris);
+
+            font-size: 14px;
+
+            margin: 10px 0 20px;
+
+            min-height: 40px;
+        }
+
+
+        .precio {
+
+            font-size: 42px;
+
+            font-weight: 900;
+
+            margin-bottom: 5px;
+        }
+
+
+        .precio span {
+
+            font-size: 14px;
+
+            color: var(--gris);
+
+            font-weight: 400;
+        }
+
+
+        .antes {
+
+            color: #71798c;
+
+            text-decoration: line-through;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .lista {
+
+            list-style: none;
+
+            margin: 25px 0;
+        }
+
+
+        .lista li {
+
+            display: flex;
+
+            gap: 10px;
+
+            color: #cbd2e1;
+
+            font-size: 14px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .lista i {
+            color: #45df94;
+        }
+
+
+        .price-button {
+
+            width: 100%;
+
+            justify-content: center;
+        }
+
+
+        /* =========================
+           PROMOCIÓN
+        ========================== */
+
+        .promo {
+
+            margin-top: 60px;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background: var(--gradiente);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        .promo h2 {
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .promo p {
+            color: rgba(255,255,255,0.8);
+        }
+
+
+        .promo .btn {
+
+            background: white;
+
+            color: #171a2c;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================
+           TESTIMONIOS
+        ========================== */
+
+        .testimonials {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .testimonial {
+
+            padding: 28px;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--borde);
+
+            background: var(--tarjeta);
+        }
+
+
+        .stars {
+
+            color: #ffc857;
+
+            margin-bottom: 15px;
+        }
+
+
+        .testimonial p {
+
+            color: #c1c8d8;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        .person {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+
+        .avatar {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: var(--gradiente);
+
+            display: grid;
+
+            place-items: center;
+
+            font-weight: 800;
+        }
+
+
+        .person small {
+            color: var(--gris);
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================== */
+
+        .contact {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+
+        .contact-text h2 {
+
+            font-size: 45px;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-text p {
+
+            color: var(--gris);
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            color: #cbd2e1;
+        }
+
+
+        .contact-item i {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--tarjeta);
+
+            border: 1px solid var(--borde);
+
+            border-radius: 10px;
+
+            color: var(--azul);
+        }
+
+
+        form {
+
+            padding: 30px;
+
+            border: 1px solid var(--borde);
+
+            background: var(--tarjeta);
+
+            border-radius: 20px;
+        }
+
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+
+        .input-group label {
+
+            display: block;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+
+            color: #cbd2e1;
+        }
+
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            border: 1px solid var(--borde);
+
+            background: rgba(0,0,0,0.2);
+
+            color: white;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        input:focus,
+        textarea:focus {
+
+            border-color: var(--azul);
+
+            box-shadow: 0 0 0 3px rgba(91,140,255,0.1);
+        }
+
+
+        textarea {
+
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+
+        form .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            padding: 30px 20px;
+
+            border-top: 1px solid var(--borde);
+
+            color: var(--gris);
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================== */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            background: var(--verde);
+
+            display: grid;
+
+            place-items: center;
+
+            color: white;
+
+            font-size: 28px;
+
+            z-index: 999;
+
+            box-shadow: 0 10px 30px rgba(37,211,102,0.35);
+
+            animation: pulso 2s infinite;
+        }
+
+
+        /* =========================
+           MODAL
+        ========================== */
+
+        .modal {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.75);
+
+            backdrop-filter: blur(8px);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            z-index: 2000;
+        }
+
+
+        .modal.activo {
+            display: flex;
+        }
+
+
+        .modal-content {
+
+            max-width: 550px;
+
+            width: 100%;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            background: #101526;
+
+            border: 1px solid var(--borde);
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            animation: modalEntrada 0.3s ease;
+        }
+
+
+        .modal-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .cerrar {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--borde);
+
+            background: rgba(255,255,255,0.05);
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 18px;
+        }
+
+
+        .modal-content ul {
+
+            list-style: none;
+
+            margin: 20px 0;
+        }
+
+
+        .modal-content li {
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            color: #cbd2e1;
+        }
+
+
+        .modal-content li i {
+
+            color: #45df94;
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           ANIMACIONES
+        ========================== */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes pulso {
+
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37,211,102,0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0);
+            }
+        }
+
+
+        @keyframes modalEntrada {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.9);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+            }
+        }
+
+
+        /* =========================
+           ANIMACIÓN SCROLL
+        ========================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(40px);
+
+            transition: 0.8s ease;
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .services,
+            .pricing,
+            .testimonials {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .contact {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .promo {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+
+                padding: 0 18px;
+            }
+
+
+            .menu {
+
+                display: none;
+            }
+
+
+            section {
+
+                padding: 75px 18px;
+            }
+
+
+            .hero h1 {
+
+                letter-spacing: -2px;
+            }
+
+
+            .hero p {
+
+                font-size: 15px;
+            }
+
+
+            .services,
+            .pricing,
+            .testimonials,
+            .stats {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .price-card.destacado {
+
+                transform: none;
+            }
+
+
+            .promo {
+
+                padding: 30px 20px;
+            }
+
+
+            .contact-text h2 {
+
+                font-size: 35px;
+            }
+
+
+            .whatsapp {
+
+                width: 54px;
+
+                height: 54px;
+
+                right: 18px;
+
+                bottom: 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#" class="logo">
+                Aron<span>Web</span>
+            </a>
+
+            <div class="menu">
+
+                <a href="#servicios">Servicios</a>
+
+                <a href="#precios">Paquetes</a>
+
+                <a href="#testimonios">Opiniones</a>
+
+                <a href="#contacto" class="nav-button">
+                    Cotizar proyecto
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="etiqueta">
+
+                    <span class="punto"></span>
+
+                    Disponible para nuevos proyectos
+
+                </div>
+
+
+                <h1>
+
+                    Tu negocio merece una
+
+                    <span>gran página web.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Diseño y desarrollo páginas web modernas,
+                    rápidas y profesionales que ayudan a que tu
+                    negocio se vea increíble y consiga más clientes.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#precios" class="btn btn-primary">
+
+                        Ver paquetes
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#contacto" class="btn btn-secondary">
+
+                        <i class="fa-regular fa-comments"></i>
+
+                        Hablar conmigo
+
+                    </a>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <h3>100%</h3>
+
+                        <p>Diseño personalizado</p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>24/7</h3>
+
+                        <p>Tu página disponible</p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>+SEO</h3>
+
+                        <p>Optimización inicial</p>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <h3>📱</h3>
+
+                        <p>Adaptable a dispositivos</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SERVICIOS
+        ========================== -->
+
+        <section id="servicios">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <small>¿Qué hago?</small>
+
+                    <h2>Todo lo que necesita tu página</h2>
+
+                    <p>
+                        Creo sitios web pensados para verse
+                        profesionales y ofrecer una excelente
+                        experiencia a tus clientes.
+                    </p>
+
+                </div>
+
+
+                <div class="services">
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <h3>Desarrollo Web</h3>
+
+                        <p>
+                            Páginas construidas con HTML, CSS y
+                            JavaScript, con código limpio y moderno.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+                        <h3>Diseño Profesional</h3>
+
+                        <p>
+                            Diseños modernos que representan la
+                            personalidad y estilo de tu negocio.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-mobile-screen"></i>
+
+                        </div>
+
+                        <h3>Responsive</h3>
+
+                        <p>
+                            Tu página se adapta automáticamente a
+                            celulares, tablets y computadoras.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <h3>SEO</h3>
+
+                        <p>
+                            Optimización inicial para ayudar a que
+                            Google pueda entender y encontrar tu web.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <h3>Velocidad</h3>
+
+                        <p>
+                            Optimización para conseguir una
+                            experiencia rápida y fluida.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service reveal">
+
+                        <div class="icon">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </div>
+
+                        <h3>Animaciones</h3>
+
+                        <p>
+                            Efectos visuales y animaciones para
+                            darle vida a tu página.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PAQUETES
+        ========================== -->
+
+        <section id="precios">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <small>Precios</small>
+
+                    <h2>Elige tu paquete</h2>
+
+                    <p>
+                        Opciones para diferentes tipos de negocios.
+                        Puedes personalizar cualquiera de ellas.
+                    </p>
+
+                </div>
+
+
+                <div class="pricing">
+
+
+                    <!-- BÁSICO -->
+
+                    <article class="price-card reveal">
+
+                        <h3>Starter</h3>
+
+                        <p class="descripcion">
+                            Para comenzar tu presencia en internet.
+                        </p>
+
+
+                        <div class="precio">
+                            $3,999 <span>MXN</span>
+                        </div>
+
+                        <div class="antes">
+                            $4,999 MXN
+                        </div>
+
+
+                        <ul class="lista">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                1 página web
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Diseño personalizado
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Diseño responsive
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Botón de WhatsApp
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                SEO básico
+                            </li>
+
+                        </ul>
+
+
+                        <button
+                            class="btn btn-secondary price-button"
+                            onclick="abrirModal('starter')">
+
+                            Ver qué incluye
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- PROFESIONAL -->
+
+                    <article class="price-card destacado reveal">
+
+                        <div class="popular">
+                            ⭐ MÁS POPULAR
+                        </div>
+
+
+                        <h3>Profesional</h3>
+
+                        <p class="descripcion">
+                            Ideal para negocios que quieren crecer.
+                        </p>
+
+
+                        <div class="precio">
+                            $4,799 <span>MXN</span>
+                        </div>
+
+                        <div class="antes">
+                            $5,999 MXN
+                        </div>
+
+
+                        <ul class="lista">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Hasta 5 secciones
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Diseño premium
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Animaciones
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                SEO avanzado
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Formulario de contacto
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Integración WhatsApp
+                            </li>
+
+                        </ul>
+
+
+                        <button
+                            class="btn btn-primary price-button"
+                            onclick="abrirModal('profesional')">
+
+                            Ver qué incluye
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- PREMIUM -->
+
+                    <article class="price-card reveal">
+
+                        <h3>Premium</h3>
+
+                        <p class="descripcion">
+                            Para marcas que buscan destacar.
+                        </p>
+
+
+                        <div class="precio">
+                            $7,499 <span>MXN</span>
+                        </div>
+
+                        <div class="antes">
+                            $9,999 MXN
+                        </div>
+
+
+                        <ul class="lista">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Hasta 10 secciones
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Diseño exclusivo
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Animaciones avanzadas
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                SEO completo
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Integraciones
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Soporte inicial
+                            </li>
+
+                        </ul>
+
+
+                        <button
+                            class="btn btn-secondary price-button"
+                            onclick="abrirModal('premium')">
+
+                            Ver qué incluye
+
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- PROMOCIÓN -->
+
+                <div class="promo reveal">
+
+                    <div>
+
+                        <h2>
+                            🎁 Promo de lanzamiento
+                        </h2>
+
+                        <p>
+                            20% de descuento en tu primera página web.
+                        </p>
+
+                    </div>
+
+
+                    <a href="#contacto" class="btn">
+
+                        Aprovechar promoción
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TESTIMONIOS
+        ========================== -->
+
+        <section id="testimonios">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <small>Clientes</small>
+
+                    <h2>Lo que dicen de mi trabajo</h2>
+
+                </div>
+
+
+                <div class="testimonials">
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "La página quedó mucho más profesional
+                            de lo que esperaba. Ahora mi negocio
+                            tiene una presencia mucho mejor."
+                        </p>
+
+
+                        <div class="person">
+
+                            <div class="avatar">
+                                J
+                            </div>
+
+                            <div>
+                                <strong>Juan M.</strong><br>
+                                <small>Emprendedor</small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Me encantó el diseño y especialmente
+                            que funciona perfectamente desde mi
+                            celular."
+                        </p>
+
+
+                        <div class="person">
+
+                            <div class="avatar">
+                                A
+                            </div>
+
+                            <div>
+                                <strong>Ana R.</strong><br>
+                                <small>Dueña de negocio</small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "La página se ve moderna y mis clientes
+                            ahora pueden encontrar fácilmente la
+                            información de mi negocio."
+                        </p>
+
+
+                        <div class="person">
+
+                            <div class="avatar">
+                                C
+                            </div>
+
+                            <div>
+                                <strong>Carlos D.</strong><br>
+                                <small>Emprendedor</small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACTO
+        ========================== -->
+
+        <section id="contacto">
+
+            <div class="container">
+
+                <div class="contact">
+
+
+                    <div class="contact-text reveal">
+
+                        <small style="color:#5b8cff;font-weight:800;">
+                            HABLEMOS
+                        </small>
+
+                        <h2>
+                            ¿Tienes una idea?
+                            Hagámosla realidad.
+                        </h2>
+
+                        <p>
+                            Cuéntame qué necesitas y podemos crear
+                            una página web que represente realmente
+                            a tu negocio.
+                        </p>
+
+
+                        <div class="contact-info">
+
+                            <div class="contact-item">
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                <span>
+                                    WhatsApp
+                                </span>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <span>
+                                    contacto@aronweb.com
+                                </span>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <span>
+                                    México
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form
+                        class="reveal"
+                        onsubmit="enviarFormulario(event)">
+
+                        <div class="input-group">
+
+                            <label>
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Tu nombre"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                placeholder="tu@email.com"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                ¿Qué necesitas?
+                            </label>
+
+                            <textarea
+                                placeholder="Cuéntame sobre tu proyecto..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Solicitar cotización
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 AronWeb — Diseño y desarrollo web.
+
+    </footer>
+
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
+
+    <!-- Cambia el número por tu número real -->
+    <a
+        href="https://wa.me/5210000000000"
+        target="_blank"
+        class="whatsapp"
+        aria-label="Contactar por WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =========================
+         MODAL DE PAQUETES
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitulo">
+                    Paquete
+                </h2>
+
+                <button
+                    class="cerrar"
+                    onclick="cerrarModal()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+
+            <p id="modalDescripcion"
+                style="color:#a7afc2;">
+
+            </p>
+
+
+            <ul id="modalLista">
+
+            </ul>
+
+
+            <a
+                href="#contacto"
+                onclick="cerrarModal()"
+                class="btn btn-primary"
+                style="width:100%;justify-content:center;">
+
+                Quiero este paquete
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* =========================
+           DATOS DE LOS PAQUETES
+        ========================== */
+
+        const paquetes = {
+
+            starter: {
+
+                titulo: "🚀 Paquete Starter",
+
+                descripcion:
+                    "Perfecto para comenzar a tener presencia profesional en internet.",
+
+                elementos: [
+
+                    "Página principal personalizada",
+
+                    "Diseño moderno",
+
+                    "Adaptación para celular",
+
+                    "Adaptación para tablet",
+
+                    "Adaptación para computadora",
+
+                    "Botón de WhatsApp",
+
+                    "Formulario básico",
+
+                    "SEO básico",
+
+                    "Animaciones sencillas",
+
+                    "Entrega del proyecto"
+                ]
+            },
+
+
+            profesional: {
+
+                titulo: "🔥 Paquete Profesional",
+
+                descripcion:
+                    "La mejor opción para negocios que quieren una página completa y moderna.",
+
+                elementos: [
+
+                    "Hasta 5 secciones",
+
+                    "Diseño premium personalizado",
+
+                    "Diseño responsive",
+
+                    "Animaciones profesionales",
+
+                    "Efectos al hacer scroll",
+
+                    "Formulario de contacto",
+
+                    "Botón de WhatsApp",
+
+                    "SEO avanzado",
+
+                    "Optimización de velocidad",
+
+                    "Redes sociales",
+
+                    "Galería de imágenes",
+
+                    "Soporte inicial"
+                ]
+            },
+
+
+            premium: {
+
+                titulo: "💎 Paquete Premium",
+
+                descripcion:
+                    "Una solución completa para marcas que quieren destacar.",
+
+                elementos: [
+
+                    "Hasta 10 secciones",
+
+                    "Diseño totalmente personalizado",
+
+                    "Animaciones avanzadas",
+
+                    "Efectos visuales premium",
+
+                    "Diseño responsive completo",
+
+                    "SEO completo",
+
+                    "Optimización de velocidad",
+
+                    "Formulario avanzado",
+
+                    "Integración con WhatsApp",
+
+                    "Integración de redes sociales",
+
+                    "Galería profesional",
+
+                    "Sección de testimonios",
+
+                    "Google Maps",
+
+                    "Soporte inicial"
+                ]
+            }
+
+        };
+
+
+
+        /* =========================
+           ABRIR MODAL
+        ========================== */
+
+        function abrirModal(tipo) {
+
+            const paquete = paquetes[tipo];
+
+            document.getElementById("modalTitulo").textContent =
+                paquete.titulo;
+
+            document.getElementById("modalDescripcion").textContent =
+                paquete.descripcion;
+
+
+            const lista =
+                document.getElementById("modalLista");
+
+            lista.innerHTML = "";
+
+
+            paquete.elementos.forEach(elemento => {
+
+                const li = document.createElement("li");
+
+                li.innerHTML =
+                    `<i class="fa-solid fa-check"></i>${elemento}`;
+
+                lista.appendChild(li);
+
+            });
+
+
+            document
+                .getElementById("modal")
+                .classList.add("activo");
+        }
+
+
+
+        /* =========================
+           CERRAR MODAL
+        ========================== */
+
+        function cerrarModal() {
+
+            document
+                .getElementById("modal")
+                .classList.remove("activo");
+        }
+
+
+
+        /* =========================
+           CERRAR HACIENDO CLICK
+           FUERA DEL MODAL
+        ========================== */
+
+        document
+            .getElementById("modal")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    cerrarModal();
+
+                }
+
+            });
+
+
+
+        /* =========================
+           ANIMACIONES AL HACER SCROLL
+        ========================== */
+
+        const elementos =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                (entradas) => {
+
+                    entradas.forEach(entrada => {
+
+                        if (entrada.isIntersecting) {
+
+                            entrada.target.classList.add("visible");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        elementos.forEach(elemento => {
+
+            observer.observe(elemento);
+
+        });
+
+
+
+        /* =========================
+           FORMULARIO
+        ========================== */
+
+        function enviarFormulario(event) {
+
+            event.preventDefault();
+
+            alert(
+                "¡Gracias! Tu solicitud fue recibida. 🚀"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
