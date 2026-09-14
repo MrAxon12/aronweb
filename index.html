@@ -1,80 +1,68 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <!-- =========================
-         CONFIGURACIÓN BÁSICA
-    ========================== -->
+
+    <!-- ==============================
+         CONFIGURACIÓN Y SEO
+    =============================== -->
 
     <meta charset="UTF-8">
 
-    <!-- Hace que la página se adapte a celulares -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>AronWeb | Diseño y Desarrollo de Páginas Web</title>
+    <title>AronWeb | Diseño y Desarrollo Web</title>
 
     <meta name="description"
-        content="Creamos páginas web modernas, rápidas y profesionales para negocios, emprendedores y marcas. Diseñamos sitios web adaptados a celulares, tablets y computadoras.">
+        content="Creamos páginas web modernas, rápidas, profesionales y adaptables para negocios y emprendedores.">
 
     <meta name="keywords"
-        content="diseño web, páginas web, desarrollo web, páginas web México, diseñador web, sitios web, páginas profesionales">
+        content="diseño web, páginas web, desarrollo web, páginas web México, diseño de páginas, hosting, dominio">
 
-    <meta name="author" content="AronWeb">
+    <meta name="author"
+        content="AronWeb">
 
-    <!-- Open Graph para compartir la página -->
-    <meta property="og:title" content="AronWeb | Diseño Web Profesional">
+    <meta name="theme-color"
+        content="#080b16">
+
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+        content="AronWeb | Diseño Web Profesional">
+
     <meta property="og:description"
-        content="Creamos páginas web modernas y profesionales para hacer crecer tu negocio.">
-    <meta property="og:type" content="website">
+        content="Creamos páginas web modernas, rápidas y profesionales.">
 
-    <!-- Color del navegador en celular -->
-    <meta name="theme-color" content="#080b16">
-
-
-    <!-- =========================
-         FUENTES
-    ========================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <meta property="og:type"
+        content="website">
 
 
-    <!-- =========================
-         ICONOS
-    ========================== -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- =========================
+    <!-- ==============================
          CSS
-    ========================== -->
+    =============================== -->
 
     <style>
 
-        /* =========================
+        /* ==================================
            VARIABLES
-        ========================== */
+        ================================== */
 
         :root {
 
-            --fondo: #080b16;
+            --fondo: #070a12;
 
-            --fondo-secundario: #0d1222;
+            --fondo2: #0d1220;
 
-            --tarjeta: rgba(255,255,255,0.05);
+            --tarjeta: rgba(255,255,255,0.045);
 
             --borde: rgba(255,255,255,0.10);
 
             --blanco: #ffffff;
 
-            --gris: #a7afc2;
+            --gris: #aab2c5;
 
             --azul: #5b8cff;
 
@@ -82,33 +70,41 @@
 
             --verde: #25d366;
 
-            --gradiente: linear-gradient(
-                135deg,
-                #5b8cff,
-                #8b5cf6
-            );
+            --gradiente:
+                linear-gradient(
+                    135deg,
+                    #5b8cff,
+                    #8b5cf6
+                );
         }
 
 
-        /* =========================
+        /* ==================================
            RESET
-        ========================== */
+        ================================== */
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
         }
 
 
         html {
+
             scroll-behavior: smooth;
         }
 
 
         body {
 
-            font-family: "Inter", sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             background: var(--fondo);
 
@@ -119,27 +115,24 @@
 
 
         a {
+
             text-decoration: none;
+
             color: inherit;
-        }
-
-
-        img {
-            max-width: 100%;
-            display: block;
         }
 
 
         button,
         input,
         textarea {
+
             font-family: inherit;
         }
 
 
-        /* =========================
-           FONDO ANIMADO
-        ========================== */
+        /* ==================================
+           FONDO
+        ================================== */
 
         body::before {
 
@@ -147,21 +140,21 @@
 
             position: fixed;
 
-            width: 500px;
+            width: 350px;
 
-            height: 500px;
+            height: 350px;
 
             background: #5b8cff;
 
-            opacity: 0.08;
+            opacity: .08;
 
-            filter: blur(120px);
+            filter: blur(90px);
 
             border-radius: 50%;
 
-            top: -150px;
+            top: -100px;
 
-            left: -150px;
+            left: -100px;
 
             pointer-events: none;
 
@@ -175,21 +168,21 @@
 
             position: fixed;
 
-            width: 450px;
+            width: 350px;
 
-            height: 450px;
+            height: 350px;
 
             background: #8b5cf6;
 
-            opacity: 0.08;
+            opacity: .07;
 
-            filter: blur(120px);
+            filter: blur(90px);
 
             border-radius: 50%;
 
-            right: -150px;
+            right: -100px;
 
-            bottom: -150px;
+            bottom: -100px;
 
             pointer-events: none;
 
@@ -197,9 +190,9 @@
         }
 
 
-        /* =========================
+        /* ==================================
            NAVBAR
-        ========================== */
+        ================================== */
 
         header {
 
@@ -213,23 +206,25 @@
 
             z-index: 1000;
 
-            backdrop-filter: blur(20px);
+            background:
+                rgba(7,10,18,.88);
 
-            background: rgba(8,11,22,0.75);
+            backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom:
+                1px solid var(--borde);
         }
 
 
         nav {
 
-            max-width: 1200px;
+            max-width: 1150px;
+
+            height: 70px;
 
             margin: auto;
 
-            height: 75px;
-
-            padding: 0 25px;
+            padding: 0 20px;
 
             display: flex;
 
@@ -250,6 +245,7 @@
 
 
         .logo span {
+
             color: var(--azul);
         }
 
@@ -260,42 +256,43 @@
 
             align-items: center;
 
-            gap: 30px;
+            gap: 25px;
         }
 
 
         .menu a {
 
-            color: #cbd2e1;
+            color: #c6ccda;
 
             font-size: 14px;
 
-            transition: 0.3s;
+            transition: .25s;
         }
 
 
         .menu a:hover {
+
             color: white;
         }
 
 
         .nav-button {
 
+            padding: 10px 17px;
+
             background: var(--gradiente);
 
-            padding: 11px 18px;
-
-            border-radius: 10px;
+            border-radius: 9px;
 
             color: white !important;
 
-            font-weight: 700;
+            font-weight: bold;
         }
 
 
-        /* =========================
+        /* ==================================
            HERO
-        ========================== */
+        ================================== */
 
         .hero {
 
@@ -303,23 +300,21 @@
 
             display: flex;
 
-            align-items: center;
-
             justify-content: center;
+
+            align-items: center;
 
             text-align: center;
 
-            padding: 130px 20px 80px;
-
-            position: relative;
+            padding: 120px 20px 70px;
         }
 
 
         .hero-content {
 
-            max-width: 900px;
+            max-width: 850px;
 
-            animation: aparecer 1s ease;
+            animation: aparecer .7s ease;
         }
 
 
@@ -331,15 +326,17 @@
 
             gap: 8px;
 
-            padding: 8px 15px;
+            padding: 8px 14px;
 
-            border: 1px solid var(--borde);
+            border:
+                1px solid var(--borde);
 
-            background: rgba(255,255,255,0.04);
+            background:
+                rgba(255,255,255,.035);
 
             border-radius: 50px;
 
-            color: #b9c5df;
+            color: #c0c7d7;
 
             font-size: 13px;
 
@@ -353,17 +350,16 @@
 
             height: 8px;
 
-            background: #39e58c;
+            background: #38df8b;
 
             border-radius: 50%;
-
-            box-shadow: 0 0 15px #39e58c;
         }
 
 
         .hero h1 {
 
-            font-size: clamp(42px, 7vw, 82px);
+            font-size:
+                clamp(42px, 7vw, 78px);
 
             line-height: 1;
 
@@ -378,6 +374,8 @@
             background: var(--gradiente);
 
             -webkit-background-clip: text;
+
+            background-clip: text;
 
             color: transparent;
         }
@@ -399,37 +397,43 @@
 
         .hero-buttons {
 
-            margin-top: 35px;
+            margin-top: 30px;
 
             display: flex;
 
             justify-content: center;
 
-            gap: 15px;
+            gap: 12px;
 
             flex-wrap: wrap;
         }
 
 
+        /* ==================================
+           BOTONES
+        ================================== */
+
         .btn {
 
-            padding: 15px 24px;
+            padding: 14px 22px;
 
-            border-radius: 12px;
+            border-radius: 10px;
 
-            font-weight: 700;
-
-            transition: 0.3s;
+            font-weight: bold;
 
             display: inline-flex;
 
             align-items: center;
 
-            gap: 10px;
+            justify-content: center;
+
+            gap: 8px;
+
+            border: none;
 
             cursor: pointer;
 
-            border: none;
+            transition: .25s;
         }
 
 
@@ -439,23 +443,25 @@
 
             color: white;
 
-            box-shadow: 0 10px 30px rgba(91,140,255,0.25);
+            box-shadow:
+                0 8px 25px
+                rgba(91,140,255,.18);
         }
 
 
         .btn-primary:hover {
 
-            transform: translateY(-4px);
-
-            box-shadow: 0 15px 40px rgba(91,140,255,0.4);
+            transform: translateY(-3px);
         }
 
 
         .btn-secondary {
 
-            border: 1px solid var(--borde);
+            background:
+                rgba(255,255,255,.04);
 
-            background: rgba(255,255,255,0.04);
+            border:
+                1px solid var(--borde);
 
             color: white;
         }
@@ -463,19 +469,66 @@
 
         .btn-secondary:hover {
 
-            background: rgba(255,255,255,0.08);
+            background:
+                rgba(255,255,255,.08);
 
-            transform: translateY(-4px);
+            transform: translateY(-3px);
         }
 
 
-        /* =========================
+        /* ==================================
+           ESTADÍSTICAS
+        ================================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 15px;
+
+            margin-top: 55px;
+        }
+
+
+        .stat {
+
+            padding: 20px;
+
+            background: var(--tarjeta);
+
+            border:
+                1px solid var(--borde);
+
+            border-radius: 15px;
+        }
+
+
+        .stat h3 {
+
+            font-size: 28px;
+        }
+
+
+        .stat p {
+
+            color: var(--gris);
+
+            font-size: 12px;
+
+            margin-top: 5px;
+        }
+
+
+        /* ==================================
            SECCIONES
-        ========================== */
+        ================================== */
 
         section {
 
-            padding: 100px 20px;
+            padding: 90px 20px;
         }
 
 
@@ -489,11 +542,12 @@
 
         .section-title {
 
-            text-align: center;
-
             max-width: 700px;
 
-            margin: 0 auto 60px;
+            margin:
+                0 auto 55px;
+
+            text-align: center;
         }
 
 
@@ -501,21 +555,22 @@
 
             color: var(--azul);
 
-            font-weight: 800;
-
-            text-transform: uppercase;
+            font-weight: bold;
 
             letter-spacing: 2px;
+
+            text-transform: uppercase;
         }
 
 
         .section-title h2 {
 
-            font-size: clamp(32px, 5vw, 52px);
-
-            margin: 12px 0;
+            font-size:
+                clamp(32px,5vw,50px);
 
             letter-spacing: -2px;
+
+            margin: 12px 0;
         }
 
 
@@ -527,150 +582,69 @@
         }
 
 
-        /* =========================
-           ESTADÍSTICAS
-        ========================== */
-
-        .stats {
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 20px;
-
-            margin-top: 60px;
-        }
-
-
-        .stat {
-
-            text-align: center;
-
-            padding: 25px;
-
-            border: 1px solid var(--borde);
-
-            background: var(--tarjeta);
-
-            border-radius: 18px;
-        }
-
-
-        .stat h3 {
-
-            font-size: 30px;
-
-            color: white;
-        }
-
-
-        .stat p {
-
-            color: var(--gris);
-
-            font-size: 13px;
-
-            margin-top: 5px;
-        }
-
-
-        /* =========================
+        /* ==================================
            SERVICIOS
-        ========================== */
+        ================================== */
 
         .services {
 
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3,1fr);
 
-            gap: 20px;
+            gap: 18px;
         }
 
 
         .service {
 
-            padding: 30px;
-
-            border: 1px solid var(--borde);
+            padding: 28px;
 
             background: var(--tarjeta);
 
-            border-radius: 20px;
+            border:
+                1px solid var(--borde);
 
-            transition: 0.4s;
+            border-radius: 18px;
 
-            position: relative;
-
-            overflow: hidden;
-        }
-
-
-        .service::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 100px;
-
-            height: 100px;
-
-            background: var(--azul);
-
-            opacity: 0;
-
-            filter: blur(50px);
-
-            top: -30px;
-
-            right: -30px;
-
-            transition: 0.4s;
+            transition: .3s;
         }
 
 
         .service:hover {
 
-            transform: translateY(-8px);
+            transform: translateY(-7px);
 
-            border-color: rgba(91,140,255,0.4);
-        }
-
-
-        .service:hover::before {
-            opacity: 0.5;
+            border-color:
+                rgba(91,140,255,.4);
         }
 
 
         .icon {
 
-            width: 55px;
+            width: 50px;
 
-            height: 55px;
+            height: 50px;
 
             display: grid;
 
             place-items: center;
 
-            border-radius: 15px;
+            background:
+                rgba(91,140,255,.12);
 
-            background: rgba(91,140,255,0.12);
-
-            color: #79a1ff;
+            border-radius: 12px;
 
             font-size: 22px;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
 
         .service h3 {
 
-            margin-bottom: 10px;
-
-            font-size: 20px;
+            margin-bottom: 9px;
         }
 
 
@@ -678,23 +652,24 @@
 
             color: var(--gris);
 
-            line-height: 1.7;
+            line-height: 1.6;
 
             font-size: 14px;
         }
 
 
-        /* =========================
-           PRECIOS
-        ========================== */
+        /* ==================================
+           PAQUETES
+        ================================== */
 
         .pricing {
 
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3,1fr);
 
-            gap: 25px;
+            gap: 22px;
 
             align-items: stretch;
         }
@@ -702,39 +677,44 @@
 
         .price-card {
 
+            padding: 30px 25px;
+
+            background:
+                rgba(255,255,255,.04);
+
+            border:
+                1px solid var(--borde);
+
+            border-radius: 20px;
+
             position: relative;
 
-            padding: 35px 28px;
-
-            border: 1px solid var(--borde);
-
-            background: rgba(255,255,255,0.045);
-
-            border-radius: 24px;
-
-            transition: 0.4s;
+            transition: .3s;
         }
 
 
         .price-card:hover {
 
-            transform: translateY(-10px);
+            transform: translateY(-8px);
 
-            border-color: rgba(91,140,255,0.5);
+            border-color:
+                rgba(91,140,255,.45);
         }
 
 
         .price-card.destacado {
 
-            border: 2px solid var(--azul);
+            border:
+                2px solid var(--azul);
 
-            background: linear-gradient(
-                180deg,
-                rgba(91,140,255,0.13),
-                rgba(255,255,255,0.04)
-            );
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(91,140,255,.12),
+                    rgba(255,255,255,.035)
+                );
 
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
 
@@ -742,72 +722,72 @@
 
             position: absolute;
 
-            top: -14px;
+            top: -13px;
 
             left: 50%;
 
-            transform: translateX(-50%);
+            transform:
+                translateX(-50%);
 
-            background: var(--gradiente);
-
-            padding: 7px 16px;
+            padding: 6px 14px;
 
             border-radius: 50px;
 
+            background: var(--gradiente);
+
             font-size: 11px;
 
-            font-weight: 800;
+            font-weight: bold;
 
             white-space: nowrap;
         }
 
 
         .price-card h3 {
-            font-size: 22px;
+
+            font-size: 21px;
         }
 
 
-        .price-card .descripcion {
+        .descripcion {
 
             color: var(--gris);
 
-            font-size: 14px;
+            font-size: 13px;
 
-            margin: 10px 0 20px;
+            line-height: 1.5;
 
-            min-height: 40px;
+            margin: 8px 0 20px;
         }
 
 
         .precio {
 
-            font-size: 42px;
+            font-size: 40px;
 
             font-weight: 900;
-
-            margin-bottom: 5px;
         }
 
 
         .precio span {
 
-            font-size: 14px;
+            font-size: 13px;
 
             color: var(--gris);
 
-            font-weight: 400;
+            font-weight: normal;
         }
 
 
         .antes {
 
-            color: #71798c;
+            color: #70788b;
 
             text-decoration: line-through;
 
-            font-size: 14px;
+            font-size: 13px;
 
-            margin-bottom: 20px;
+            margin-top: 3px;
         }
 
 
@@ -815,48 +795,121 @@
 
             list-style: none;
 
-            margin: 25px 0;
+            margin: 23px 0;
         }
 
 
         .lista li {
 
-            display: flex;
+            color: #c7cedc;
 
-            gap: 10px;
+            font-size: 13px;
 
-            color: #cbd2e1;
+            margin-bottom: 12px;
 
-            font-size: 14px;
-
-            margin-bottom: 14px;
+            line-height: 1.4;
         }
 
 
-        .lista i {
-            color: #45df94;
+        .check {
+
+            color: #43df91;
+
+            margin-right: 7px;
         }
 
 
         .price-button {
 
             width: 100%;
-
-            justify-content: center;
         }
 
 
-        /* =========================
+        /* ==================================
+           EXTRA HOSTING
+        ================================== */
+
+        .extra {
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            border:
+                1px solid rgba(139,92,246,.35);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(91,140,255,.08),
+                    rgba(139,92,246,.08)
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .extra-text h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .extra-text p {
+
+            color: var(--gris);
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        .extra-price {
+
+            white-space: nowrap;
+
+            font-size: 25px;
+
+            font-weight: 900;
+        }
+
+
+        .extra-price small {
+
+            display: block;
+
+            color: var(--gris);
+
+            font-size: 11px;
+
+            font-weight: normal;
+
+            text-align: right;
+        }
+
+
+        /* ==================================
            PROMOCIÓN
-        ========================== */
+        ================================== */
 
         .promo {
 
-            margin-top: 60px;
+            margin-top: 50px;
 
-            padding: 45px;
+            padding: 38px;
 
-            border-radius: 25px;
+            border-radius: 20px;
 
             background: var(--gradiente);
 
@@ -866,24 +919,20 @@
 
             justify-content: space-between;
 
-            gap: 30px;
-
-            overflow: hidden;
-
-            position: relative;
+            gap: 20px;
         }
 
 
         .promo h2 {
 
-            font-size: 32px;
-
-            margin-bottom: 10px;
+            margin-bottom: 7px;
         }
 
 
         .promo p {
-            color: rgba(255,255,255,0.8);
+
+            color:
+                rgba(255,255,255,.82);
         }
 
 
@@ -891,35 +940,37 @@
 
             background: white;
 
-            color: #171a2c;
+            color: #141827;
 
             white-space: nowrap;
         }
 
 
-        /* =========================
+        /* ==================================
            TESTIMONIOS
-        ========================== */
+        ================================== */
 
         .testimonials {
 
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3,1fr);
 
-            gap: 20px;
+            gap: 18px;
         }
 
 
         .testimonial {
 
-            padding: 28px;
-
-            border-radius: 20px;
-
-            border: 1px solid var(--borde);
+            padding: 25px;
 
             background: var(--tarjeta);
+
+            border:
+                1px solid var(--borde);
+
+            border-radius: 18px;
         }
 
 
@@ -927,17 +978,17 @@
 
             color: #ffc857;
 
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
 
         .testimonial p {
 
-            color: #c1c8d8;
-
-            line-height: 1.7;
+            color: #c2c9d8;
 
             font-size: 14px;
+
+            line-height: 1.7;
         }
 
 
@@ -947,17 +998,17 @@
 
             align-items: center;
 
-            gap: 12px;
+            gap: 10px;
 
-            margin-top: 20px;
+            margin-top: 18px;
         }
 
 
         .avatar {
 
-            width: 40px;
+            width: 38px;
 
-            height: 40px;
+            height: 38px;
 
             border-radius: 50%;
 
@@ -967,26 +1018,28 @@
 
             place-items: center;
 
-            font-weight: 800;
+            font-weight: bold;
         }
 
 
         .person small {
+
             color: var(--gris);
         }
 
 
-        /* =========================
+        /* ==================================
            CONTACTO
-        ========================== */
+        ================================== */
 
         .contact {
 
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
-            gap: 40px;
+            gap: 35px;
 
             align-items: center;
         }
@@ -994,15 +1047,16 @@
 
         .contact-text h2 {
 
-            font-size: 45px;
+            font-size: 43px;
 
             letter-spacing: -2px;
 
-            margin-bottom: 15px;
+            margin:
+                10px 0 15px;
         }
 
 
-        .contact-text p {
+        .contact-text > p {
 
             color: var(--gris);
 
@@ -1018,68 +1072,46 @@
 
             flex-direction: column;
 
-            gap: 15px;
+            gap: 12px;
         }
 
 
         .contact-item {
 
-            display: flex;
+            color: #cbd2e0;
 
-            align-items: center;
-
-            gap: 15px;
-
-            color: #cbd2e1;
-        }
-
-
-        .contact-item i {
-
-            width: 42px;
-
-            height: 42px;
-
-            display: grid;
-
-            place-items: center;
-
-            background: var(--tarjeta);
-
-            border: 1px solid var(--borde);
-
-            border-radius: 10px;
-
-            color: var(--azul);
+            font-size: 14px;
         }
 
 
         form {
 
-            padding: 30px;
-
-            border: 1px solid var(--borde);
+            padding: 28px;
 
             background: var(--tarjeta);
 
-            border-radius: 20px;
+            border:
+                1px solid var(--borde);
+
+            border-radius: 18px;
         }
 
 
         .input-group {
-            margin-bottom: 15px;
+
+            margin-bottom: 14px;
         }
 
 
-        .input-group label {
+        label {
 
             display: block;
 
-            font-size: 13px;
+            color: #cbd2e0;
 
-            margin-bottom: 7px;
+            font-size: 12px;
 
-            color: #cbd2e1;
+            margin-bottom: 6px;
         }
 
 
@@ -1088,19 +1120,19 @@
 
             width: 100%;
 
-            padding: 14px;
+            padding: 13px;
 
-            border-radius: 10px;
+            background:
+                rgba(0,0,0,.22);
 
-            border: 1px solid var(--borde);
+            border:
+                1px solid var(--borde);
 
-            background: rgba(0,0,0,0.2);
+            border-radius: 9px;
 
             color: white;
 
             outline: none;
-
-            transition: 0.3s;
         }
 
 
@@ -1108,58 +1140,57 @@
         textarea:focus {
 
             border-color: var(--azul);
-
-            box-shadow: 0 0 0 3px rgba(91,140,255,0.1);
         }
 
 
         textarea {
 
-            min-height: 120px;
+            min-height: 110px;
 
             resize: vertical;
         }
 
 
         form .btn {
+
             width: 100%;
-            justify-content: center;
         }
 
 
-        /* =========================
+        /* ==================================
            FOOTER
-        ========================== */
+        ================================== */
 
         footer {
 
             padding: 30px 20px;
 
-            border-top: 1px solid var(--borde);
-
-            color: var(--gris);
+            border-top:
+                1px solid var(--borde);
 
             text-align: center;
 
-            font-size: 13px;
+            color: var(--gris);
+
+            font-size: 12px;
         }
 
 
-        /* =========================
+        /* ==================================
            WHATSAPP
-        ========================== */
+        ================================== */
 
         .whatsapp {
 
             position: fixed;
 
-            right: 25px;
+            right: 20px;
 
-            bottom: 25px;
+            bottom: 20px;
 
-            width: 60px;
+            width: 55px;
 
-            height: 60px;
+            height: 55px;
 
             border-radius: 50%;
 
@@ -1171,19 +1202,27 @@
 
             color: white;
 
-            font-size: 28px;
+            font-size: 25px;
 
             z-index: 999;
 
-            box-shadow: 0 10px 30px rgba(37,211,102,0.35);
+            box-shadow:
+                0 8px 25px
+                rgba(37,211,102,.25);
 
-            animation: pulso 2s infinite;
+            transition: .25s;
         }
 
 
-        /* =========================
+        .whatsapp:hover {
+
+            transform: scale(1.08);
+        }
+
+
+        /* ==================================
            MODAL
-        ========================== */
+        ================================== */
 
         .modal {
 
@@ -1191,9 +1230,8 @@
 
             inset: 0;
 
-            background: rgba(0,0,0,0.75);
-
-            backdrop-filter: blur(8px);
+            background:
+                rgba(0,0,0,.75);
 
             display: none;
 
@@ -1208,29 +1246,32 @@
 
 
         .modal.activo {
+
             display: flex;
         }
 
 
         .modal-content {
 
-            max-width: 550px;
-
             width: 100%;
+
+            max-width: 520px;
 
             max-height: 90vh;
 
             overflow-y: auto;
 
-            background: #101526;
+            background: #101523;
 
-            border: 1px solid var(--borde);
+            border:
+                1px solid var(--borde);
 
-            border-radius: 25px;
+            border-radius: 20px;
 
-            padding: 35px;
+            padding: 30px;
 
-            animation: modalEntrada 0.3s ease;
+            animation:
+                modalEntrada .25s ease;
         }
 
 
@@ -1242,59 +1283,65 @@
 
             align-items: center;
 
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
 
         .cerrar {
 
-            width: 40px;
+            width: 38px;
 
-            height: 40px;
+            height: 38px;
 
             border-radius: 50%;
 
-            border: 1px solid var(--borde);
+            background:
+                rgba(255,255,255,.05);
 
-            background: rgba(255,255,255,0.05);
+            border:
+                1px solid var(--borde);
 
             color: white;
 
             cursor: pointer;
-
-            font-size: 18px;
         }
 
 
-        .modal-content ul {
+        .modal-description {
+
+            color: var(--gris);
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        .modal-list {
 
             list-style: none;
 
-            margin: 20px 0;
+            margin: 18px 0;
         }
 
 
-        .modal-content li {
+        .modal-list li {
 
-            padding: 12px 0;
+            padding: 10px 0;
 
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.06);
 
-            color: #cbd2e1;
+            color: #ccd3df;
+
+            font-size: 14px;
         }
 
 
-        .modal-content li i {
-
-            color: #45df94;
-
-            margin-right: 10px;
-        }
-
-
-        /* =========================
+        /* ==================================
            ANIMACIONES
-        ========================== */
+        ================================== */
 
         @keyframes aparecer {
 
@@ -1302,30 +1349,16 @@
 
                 opacity: 0;
 
-                transform: translateY(30px);
+                transform:
+                    translateY(20px);
             }
 
             to {
 
                 opacity: 1;
 
-                transform: translateY(0);
-            }
-        }
-
-
-        @keyframes pulso {
-
-            0% {
-                box-shadow: 0 0 0 0 rgba(37,211,102,0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 15px rgba(37,211,102,0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(37,211,102,0);
+                transform:
+                    translateY(0);
             }
         }
 
@@ -1336,29 +1369,30 @@
 
                 opacity: 0;
 
-                transform: scale(0.9);
+                transform:
+                    scale(.96);
             }
 
             to {
 
                 opacity: 1;
 
-                transform: scale(1);
+                transform:
+                    scale(1);
             }
         }
 
-
-        /* =========================
-           ANIMACIÓN SCROLL
-        ========================== */
 
         .reveal {
 
             opacity: 0;
 
-            transform: translateY(40px);
+            transform:
+                translateY(25px);
 
-            transition: 0.8s ease;
+            transition:
+                opacity .5s ease,
+                transform .5s ease;
         }
 
 
@@ -1366,27 +1400,30 @@
 
             opacity: 1;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
         }
 
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
+        /* ==================================
+           TABLET
+        ================================== */
 
-        @media (max-width: 900px) {
+        @media(max-width:900px) {
 
             .services,
             .pricing,
             .testimonials {
 
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    repeat(2,1fr);
             }
 
 
             .stats {
 
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    repeat(2,1fr);
             }
 
 
@@ -1405,13 +1442,11 @@
         }
 
 
-        @media (max-width: 650px) {
+        /* ==================================
+           CELULAR
+        ================================== */
 
-            nav {
-
-                padding: 0 18px;
-            }
-
+        @media(max-width:650px) {
 
             .menu {
 
@@ -1419,9 +1454,9 @@
             }
 
 
-            section {
+            .hero {
 
-                padding: 75px 18px;
+                padding-top: 110px;
             }
 
 
@@ -1452,9 +1487,23 @@
             }
 
 
+            .extra {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .extra-price small {
+
+                text-align: center;
+            }
+
+
             .promo {
 
-                padding: 30px 20px;
+                padding: 28px 20px;
             }
 
 
@@ -1466,13 +1515,37 @@
 
             .whatsapp {
 
-                width: 54px;
+                width: 52px;
 
-                height: 54px;
+                height: 52px;
 
-                right: 18px;
+                right: 15px;
 
-                bottom: 18px;
+                bottom: 15px;
+            }
+        }
+
+
+        /* ==================================
+           REDUCIR ANIMACIONES
+           SI EL USUARIO LO PREFIERE
+        ================================== */
+
+        @media(prefers-reduced-motion: reduce) {
+
+            html {
+
+                scroll-behavior: auto;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                animation: none !important;
+
+                transition: none !important;
             }
         }
 
@@ -1484,28 +1557,41 @@
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+    <!-- ==================================
+         MENÚ
+    ================================== -->
 
     <header>
 
         <nav>
 
             <a href="#" class="logo">
+
                 Aron<span>Web</span>
+
             </a>
+
 
             <div class="menu">
 
-                <a href="#servicios">Servicios</a>
+                <a href="#servicios">
+                    Servicios
+                </a>
 
-                <a href="#precios">Paquetes</a>
+                <a href="#precios">
+                    Paquetes
+                </a>
 
-                <a href="#testimonios">Opiniones</a>
+                <a href="#testimonios">
+                    Opiniones
+                </a>
 
-                <a href="#contacto" class="nav-button">
-                    Cotizar proyecto
+                <a
+                    href="#contacto"
+                    class="nav-button">
+
+                    Cotizar
+
                 </a>
 
             </div>
@@ -1516,11 +1602,14 @@
 
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- ==================================
+         CONTENIDO PRINCIPAL
+    ================================== -->
 
     <main>
+
+
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -1539,34 +1628,36 @@
 
                     Tu negocio merece una
 
-                    <span>gran página web.</span>
+                    <span>
+                        gran página web.
+                    </span>
 
                 </h1>
 
 
                 <p>
 
-                    Diseño y desarrollo páginas web modernas,
-                    rápidas y profesionales que ayudan a que tu
-                    negocio se vea increíble y consiga más clientes.
+                    Diseño y desarrollo páginas web
+                    modernas, rápidas y profesionales
+                    para ayudarte a destacar en Internet.
 
                 </p>
 
 
                 <div class="hero-buttons">
 
-                    <a href="#precios" class="btn btn-primary">
+                    <a
+                        href="#precios"
+                        class="btn btn-primary">
 
-                        Ver paquetes
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
+                        Ver paquetes →
+                        
                     </a>
 
 
-                    <a href="#contacto" class="btn btn-secondary">
-
-                        <i class="fa-regular fa-comments"></i>
+                    <a
+                        href="#contacto"
+                        class="btn btn-secondary">
 
                         Hablar conmigo
 
@@ -1581,7 +1672,9 @@
 
                         <h3>100%</h3>
 
-                        <p>Diseño personalizado</p>
+                        <p>
+                            Diseño personalizado
+                        </p>
 
                     </div>
 
@@ -1590,16 +1683,20 @@
 
                         <h3>24/7</h3>
 
-                        <p>Tu página disponible</p>
+                        <p>
+                            Página disponible
+                        </p>
 
                     </div>
 
 
                     <div class="stat">
 
-                        <h3>+SEO</h3>
+                        <h3>SEO</h3>
 
-                        <p>Optimización inicial</p>
+                        <p>
+                            Optimización inicial
+                        </p>
 
                     </div>
 
@@ -1608,7 +1705,9 @@
 
                         <h3>📱</h3>
 
-                        <p>Adaptable a dispositivos</p>
+                        <p>
+                            Responsive
+                        </p>
 
                     </div>
 
@@ -1620,9 +1719,7 @@
 
 
 
-        <!-- =========================
-             SERVICIOS
-        ========================== -->
+        <!-- SERVICIOS -->
 
         <section id="servicios">
 
@@ -1630,14 +1727,17 @@
 
                 <div class="section-title reveal">
 
-                    <small>¿Qué hago?</small>
+                    <small>
+                        Servicios
+                    </small>
 
-                    <h2>Todo lo que necesita tu página</h2>
+                    <h2>
+                        Todo lo que necesita tu página
+                    </h2>
 
                     <p>
-                        Creo sitios web pensados para verse
-                        profesionales y ofrecer una excelente
-                        experiencia a tus clientes.
+                        Creamos páginas modernas,
+                        rápidas y adaptadas a cualquier dispositivo.
                     </p>
 
                 </div>
@@ -1645,19 +1745,21 @@
 
                 <div class="services">
 
+
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-code"></i>
-
+                            💻
                         </div>
 
-                        <h3>Desarrollo Web</h3>
+                        <h3>
+                            Desarrollo Web
+                        </h3>
 
                         <p>
-                            Páginas construidas con HTML, CSS y
-                            JavaScript, con código limpio y moderno.
+                            Desarrollo con HTML, CSS y
+                            JavaScript utilizando código
+                            limpio y moderno.
                         </p>
 
                     </article>
@@ -1666,16 +1768,16 @@
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-palette"></i>
-
+                            🎨
                         </div>
 
-                        <h3>Diseño Profesional</h3>
+                        <h3>
+                            Diseño Profesional
+                        </h3>
 
                         <p>
-                            Diseños modernos que representan la
-                            personalidad y estilo de tu negocio.
+                            Diseños modernos adaptados
+                            a la identidad de tu negocio.
                         </p>
 
                     </article>
@@ -1684,16 +1786,16 @@
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-mobile-screen"></i>
-
+                            📱
                         </div>
 
-                        <h3>Responsive</h3>
+                        <h3>
+                            Responsive
+                        </h3>
 
                         <p>
-                            Tu página se adapta automáticamente a
-                            celulares, tablets y computadoras.
+                            Tu página funcionará en
+                            celular, tablet y computadora.
                         </p>
 
                     </article>
@@ -1702,16 +1804,17 @@
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
+                            🔎
                         </div>
 
-                        <h3>SEO</h3>
+                        <h3>
+                            SEO
+                        </h3>
 
                         <p>
-                            Optimización inicial para ayudar a que
-                            Google pueda entender y encontrar tu web.
+                            Estructura y etiquetas para
+                            ayudar a los buscadores a
+                            entender tu página.
                         </p>
 
                     </article>
@@ -1720,16 +1823,16 @@
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-bolt"></i>
-
+                            ⚡
                         </div>
 
-                        <h3>Velocidad</h3>
+                        <h3>
+                            Velocidad
+                        </h3>
 
                         <p>
-                            Optimización para conseguir una
-                            experiencia rápida y fluida.
+                            Código optimizado para reducir
+                            tiempos de carga.
                         </p>
 
                     </article>
@@ -1738,16 +1841,16 @@
                     <article class="service reveal">
 
                         <div class="icon">
-
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-
+                            ✨
                         </div>
 
-                        <h3>Animaciones</h3>
+                        <h3>
+                            Animaciones
+                        </h3>
 
                         <p>
-                            Efectos visuales y animaciones para
-                            darle vida a tu página.
+                            Efectos modernos sin sobrecargar
+                            innecesariamente la página.
                         </p>
 
                     </article>
@@ -1760,9 +1863,7 @@
 
 
 
-        <!-- =========================
-             PAQUETES
-        ========================== -->
+        <!-- PAQUETES -->
 
         <section id="precios">
 
@@ -1770,13 +1871,17 @@
 
                 <div class="section-title reveal">
 
-                    <small>Precios</small>
+                    <small>
+                        Paquetes
+                    </small>
 
-                    <h2>Elige tu paquete</h2>
+                    <h2>
+                        Elige la opción ideal
+                    </h2>
 
                     <p>
-                        Opciones para diferentes tipos de negocios.
-                        Puedes personalizar cualquiera de ellas.
+                        Puedes elegir un paquete y
+                        personalizarlo según tu proyecto.
                     </p>
 
                 </div>
@@ -1785,50 +1890,58 @@
                 <div class="pricing">
 
 
-                    <!-- BÁSICO -->
+                    <!-- STARTER -->
 
                     <article class="price-card reveal">
 
-                        <h3>Starter</h3>
+                        <h3>
+                            🚀 Starter
+                        </h3>
 
                         <p class="descripcion">
-                            Para comenzar tu presencia en internet.
+                            Para comenzar tu presencia
+                            profesional en Internet.
                         </p>
 
 
                         <div class="precio">
-                            $3,999 <span>MXN</span>
+
+                            $1,499
+
+                            <span>MXN</span>
+
                         </div>
 
+
                         <div class="antes">
-                            $4,999 MXN
+                            $1,999 MXN
                         </div>
 
 
                         <ul class="lista">
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 1 página web
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Diseño personalizado
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
-                                Diseño responsive
+                                <span class="check">✓</span>
+                                Responsive
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
-                                Botón de WhatsApp
+                                <span class="check">✓</span>
+                                WhatsApp
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 SEO básico
                             </li>
 
@@ -1849,59 +1962,69 @@
 
                     <!-- PROFESIONAL -->
 
-                    <article class="price-card destacado reveal">
+                    <article
+                        class="price-card destacado reveal">
 
                         <div class="popular">
                             ⭐ MÁS POPULAR
                         </div>
 
 
-                        <h3>Profesional</h3>
+                        <h3>
+                            🔥 Profesional
+                        </h3>
+
 
                         <p class="descripcion">
-                            Ideal para negocios que quieren crecer.
+                            Para negocios que quieren
+                            crecer y destacar.
                         </p>
 
 
                         <div class="precio">
-                            $4,799 <span>MXN</span>
+
+                            $2,999
+
+                            <span>MXN</span>
+
                         </div>
 
+
                         <div class="antes">
-                            $5,999 MXN
+                            $3,999 MXN
                         </div>
 
 
                         <ul class="lista">
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Hasta 5 secciones
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Diseño premium
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Animaciones
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 SEO avanzado
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
-                                Formulario de contacto
+                                <span class="check">✓</span>
+                                Formulario
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
-                                Integración WhatsApp
+                                <span class="check">✓</span>
+                                WhatsApp
                             </li>
 
                         </ul>
@@ -1923,51 +2046,60 @@
 
                     <article class="price-card reveal">
 
-                        <h3>Premium</h3>
+                        <h3>
+                            💎 Premium
+                        </h3>
+
 
                         <p class="descripcion">
-                            Para marcas que buscan destacar.
+                            Para marcas que quieren
+                            una experiencia completa.
                         </p>
 
 
                         <div class="precio">
-                            $7,499 <span>MXN</span>
+
+                            $5,499
+
+                            <span>MXN</span>
+
                         </div>
 
+
                         <div class="antes">
-                            $9,999 MXN
+                            $6,999 MXN
                         </div>
 
 
                         <ul class="lista">
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Hasta 10 secciones
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Diseño exclusivo
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Animaciones avanzadas
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 SEO completo
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Integraciones
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-check"></i>
+                                <span class="check">✓</span>
                                 Soporte inicial
                             </li>
 
@@ -1988,6 +2120,51 @@
 
 
 
+                <!-- ==================================
+                     EXTRA DOMINIO + HOSTING
+                ================================== -->
+
+                <div class="extra reveal">
+
+                    <div class="extra-text">
+
+                        <h3>
+                            🌐 Extra: Dominio + Hosting
+                        </h3>
+
+                        <p>
+
+                            Haz que tu página pueda estar
+                            publicada en Internet con un
+                            dominio personalizado y alojamiento
+                            web.
+
+                            <br>
+
+                            Ejemplo:
+                            <strong>
+                                www.tunegocio.com
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="extra-price">
+
+                        Desde $1,500
+
+                        <small>
+                            MXN / año
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
                 <!-- PROMOCIÓN -->
 
                 <div class="promo reveal">
@@ -1999,17 +2176,18 @@
                         </h2>
 
                         <p>
-                            20% de descuento en tu primera página web.
+                            20% de descuento en tu primera
+                            página web.
                         </p>
 
                     </div>
 
 
-                    <a href="#contacto" class="btn">
+                    <a
+                        href="#contacto"
+                        class="btn">
 
-                        Aprovechar promoción
-
-                        <i class="fa-solid fa-arrow-right"></i>
+                        Aprovechar promoción →
 
                     </a>
 
@@ -2021,9 +2199,7 @@
 
 
 
-        <!-- =========================
-             TESTIMONIOS
-        ========================== -->
+        <!-- TESTIMONIOS -->
 
         <section id="testimonios">
 
@@ -2031,14 +2207,19 @@
 
                 <div class="section-title reveal">
 
-                    <small>Clientes</small>
+                    <small>
+                        Opiniones
+                    </small>
 
-                    <h2>Lo que dicen de mi trabajo</h2>
+                    <h2>
+                        Lo que dicen mis clientes
+                    </h2>
 
                 </div>
 
 
                 <div class="testimonials">
+
 
                     <article class="testimonial reveal">
 
@@ -2047,9 +2228,8 @@
                         </div>
 
                         <p>
-                            "La página quedó mucho más profesional
-                            de lo que esperaba. Ahora mi negocio
-                            tiene una presencia mucho mejor."
+                            "La página quedó mucho más
+                            profesional de lo que esperaba."
                         </p>
 
 
@@ -2060,8 +2240,17 @@
                             </div>
 
                             <div>
-                                <strong>Juan M.</strong><br>
-                                <small>Emprendedor</small>
+
+                                <strong>
+                                    Juan M.
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Emprendedor
+                                </small>
+
                             </div>
 
                         </div>
@@ -2076,9 +2265,8 @@
                         </div>
 
                         <p>
-                            "Me encantó el diseño y especialmente
-                            que funciona perfectamente desde mi
-                            celular."
+                            "Me encantó el diseño y funciona
+                            perfectamente desde mi celular."
                         </p>
 
 
@@ -2089,8 +2277,17 @@
                             </div>
 
                             <div>
-                                <strong>Ana R.</strong><br>
-                                <small>Dueña de negocio</small>
+
+                                <strong>
+                                    Ana R.
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Dueña de negocio
+                                </small>
+
                             </div>
 
                         </div>
@@ -2105,9 +2302,8 @@
                         </div>
 
                         <p>
-                            "La página se ve moderna y mis clientes
-                            ahora pueden encontrar fácilmente la
-                            información de mi negocio."
+                            "Ahora mi negocio tiene una
+                            presencia mucho más profesional."
                         </p>
 
 
@@ -2118,8 +2314,17 @@
                             </div>
 
                             <div>
-                                <strong>Carlos D.</strong><br>
-                                <small>Emprendedor</small>
+
+                                <strong>
+                                    Carlos D.
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Emprendedor
+                                </small>
+
                             </div>
 
                         </div>
@@ -2134,9 +2339,7 @@
 
 
 
-        <!-- =========================
-             CONTACTO
-        ========================== -->
+        <!-- CONTACTO -->
 
         <section id="contacto">
 
@@ -2147,54 +2350,35 @@
 
                     <div class="contact-text reveal">
 
-                        <small style="color:#5b8cff;font-weight:800;">
+                        <small style="
+                            color:#5b8cff;
+                            font-weight:bold;
+                        ">
                             HABLEMOS
                         </small>
+
 
                         <h2>
                             ¿Tienes una idea?
                             Hagámosla realidad.
                         </h2>
 
+
                         <p>
-                            Cuéntame qué necesitas y podemos crear
-                            una página web que represente realmente
-                            a tu negocio.
+                            Cuéntame qué necesitas y
+                            podemos crear una página web
+                            para tu negocio.
                         </p>
 
 
                         <div class="contact-info">
 
                             <div class="contact-item">
-
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                                <span>
-                                    WhatsApp
-                                </span>
-
+                                💬 WhatsApp
                             </div>
 
-
                             <div class="contact-item">
-
-                                <i class="fa-regular fa-envelope"></i>
-
-                                <span>
-                                    contacto@aronweb.com
-                                </span>
-
-                            </div>
-
-
-                            <div class="contact-item">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                <span>
-                                    México
-                                </span>
-
+                                ✉️ contacto@aronweb.com
                             </div>
 
                         </div>
@@ -2206,6 +2390,7 @@
                     <form
                         class="reveal"
                         onsubmit="enviarFormulario(event)">
+
 
                         <div class="input-group">
 
@@ -2238,12 +2423,13 @@
                         <div class="input-group">
 
                             <label>
-                                ¿Qué necesitas?
+                                Cuéntame sobre tu proyecto
                             </label>
 
                             <textarea
-                                placeholder="Cuéntame sobre tu proyecto..."
-                                required></textarea>
+                                placeholder="¿Qué página necesitas?"
+                                required>
+                            </textarea>
 
                         </div>
 
@@ -2252,9 +2438,7 @@
                             type="submit"
                             class="btn btn-primary">
 
-                            Solicitar cotización
-
-                            <i class="fa-solid fa-paper-plane"></i>
+                            Solicitar cotización →
 
                         </button>
 
@@ -2270,38 +2454,36 @@
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
-        © 2026 AronWeb — Diseño y desarrollo web.
+        © 2026 AronWeb —
+        Diseño y desarrollo web.
 
     </footer>
 
 
 
-    <!-- =========================
-         WHATSAPP
-    ========================== -->
+    <!-- WHATSAPP -->
 
-    <!-- Cambia el número por tu número real -->
+    <!-- CAMBIA EL NÚMERO POR EL TUYO -->
+
     <a
         href="https://wa.me/5210000000000"
         target="_blank"
         class="whatsapp"
-        aria-label="Contactar por WhatsApp">
+        aria-label="WhatsApp">
 
-        <i class="fa-brands fa-whatsapp"></i>
+        💬
 
     </a>
 
 
 
-    <!-- =========================
-         MODAL DE PAQUETES
-    ========================== -->
+    <!-- ==================================
+         MODAL
+    ================================== -->
 
     <div
         class="modal"
@@ -2309,31 +2491,34 @@
 
         <div class="modal-content">
 
+
             <div class="modal-header">
 
                 <h2 id="modalTitulo">
                     Paquete
                 </h2>
 
+
                 <button
                     class="cerrar"
                     onclick="cerrarModal()">
 
-                    ✕
+                    ×
 
                 </button>
 
             </div>
 
 
-            <p id="modalDescripcion"
-                style="color:#a7afc2;">
-
+            <p
+                id="modalDescripcion"
+                class="modal-description">
             </p>
 
 
-            <ul id="modalLista">
-
+            <ul
+                id="modalLista"
+                class="modal-list">
             </ul>
 
 
@@ -2341,7 +2526,7 @@
                 href="#contacto"
                 onclick="cerrarModal()"
                 class="btn btn-primary"
-                style="width:100%;justify-content:center;">
+                style="width:100%;">
 
                 Quiero este paquete
 
@@ -2353,37 +2538,36 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================
          JAVASCRIPT
-    ========================== -->
+    ================================== -->
 
     <script>
 
 
-        /* =========================
-           DATOS DE LOS PAQUETES
-        ========================== */
+        /* ===============================
+           PAQUETES
+        ================================ */
 
         const paquetes = {
 
             starter: {
 
-                titulo: "🚀 Paquete Starter",
+                titulo:
+                    "🚀 Paquete Starter",
 
                 descripcion:
-                    "Perfecto para comenzar a tener presencia profesional en internet.",
+                    "Ideal para comenzar tu presencia profesional en Internet.",
 
                 elementos: [
 
-                    "Página principal personalizada",
+                    "1 página web",
 
-                    "Diseño moderno",
+                    "Diseño personalizado",
 
-                    "Adaptación para celular",
+                    "Responsive",
 
-                    "Adaptación para tablet",
-
-                    "Adaptación para computadora",
+                    "Celular, tablet y computadora",
 
                     "Botón de WhatsApp",
 
@@ -2394,24 +2578,27 @@
                     "Animaciones sencillas",
 
                     "Entrega del proyecto"
+
                 ]
+
             },
 
 
             profesional: {
 
-                titulo: "🔥 Paquete Profesional",
+                titulo:
+                    "🔥 Paquete Profesional",
 
                 descripcion:
-                    "La mejor opción para negocios que quieren una página completa y moderna.",
+                    "La opción ideal para negocios que quieren crecer.",
 
                 elementos: [
 
                     "Hasta 5 secciones",
 
-                    "Diseño premium personalizado",
+                    "Diseño premium",
 
-                    "Diseño responsive",
+                    "Responsive",
 
                     "Animaciones profesionales",
 
@@ -2419,7 +2606,7 @@
 
                     "Formulario de contacto",
 
-                    "Botón de WhatsApp",
+                    "WhatsApp",
 
                     "SEO avanzado",
 
@@ -2430,28 +2617,29 @@
                     "Galería de imágenes",
 
                     "Soporte inicial"
+
                 ]
+
             },
 
 
             premium: {
 
-                titulo: "💎 Paquete Premium",
+                titulo:
+                    "💎 Paquete Premium",
 
                 descripcion:
-                    "Una solución completa para marcas que quieren destacar.",
+                    "Para marcas que buscan una presencia web completa.",
 
                 elementos: [
 
                     "Hasta 10 secciones",
 
-                    "Diseño totalmente personalizado",
+                    "Diseño exclusivo",
+
+                    "Responsive completo",
 
                     "Animaciones avanzadas",
-
-                    "Efectos visuales premium",
-
-                    "Diseño responsive completo",
 
                     "SEO completo",
 
@@ -2459,99 +2647,137 @@
 
                     "Formulario avanzado",
 
-                    "Integración con WhatsApp",
+                    "WhatsApp",
 
-                    "Integración de redes sociales",
+                    "Redes sociales",
 
                     "Galería profesional",
 
-                    "Sección de testimonios",
+                    "Testimonios",
 
-                    "Google Maps",
+                    "Integraciones",
 
                     "Soporte inicial"
+
                 ]
+
             }
 
         };
 
 
-
-        /* =========================
+        /* ===============================
            ABRIR MODAL
-        ========================== */
+        ================================ */
 
         function abrirModal(tipo) {
 
-            const paquete = paquetes[tipo];
+            const paquete =
+                paquetes[tipo];
 
-            document.getElementById("modalTitulo").textContent =
+
+            document
+                .getElementById("modalTitulo")
+                .textContent =
                 paquete.titulo;
 
-            document.getElementById("modalDescripcion").textContent =
+
+            document
+                .getElementById("modalDescripcion")
+                .textContent =
                 paquete.descripcion;
 
 
             const lista =
                 document.getElementById("modalLista");
 
+
             lista.innerHTML = "";
 
 
-            paquete.elementos.forEach(elemento => {
+            paquete.elementos.forEach(
+                elemento => {
 
-                const li = document.createElement("li");
+                    const li =
+                        document.createElement("li");
 
-                li.innerHTML =
-                    `<i class="fa-solid fa-check"></i>${elemento}`;
 
-                lista.appendChild(li);
+                    li.innerHTML =
+                        `<span class="check">✓</span>
+                        ${elemento}`;
 
-            });
+
+                    lista.appendChild(li);
+
+                }
+            );
 
 
             document
                 .getElementById("modal")
-                .classList.add("activo");
+                .classList
+                .add("activo");
         }
 
 
-
-        /* =========================
+        /* ===============================
            CERRAR MODAL
-        ========================== */
+        ================================ */
 
         function cerrarModal() {
 
             document
                 .getElementById("modal")
-                .classList.remove("activo");
+                .classList
+                .remove("activo");
         }
 
 
-
-        /* =========================
-           CERRAR HACIENDO CLICK
-           FUERA DEL MODAL
-        ========================== */
+        /* ===============================
+           CLICK FUERA DEL MODAL
+        ================================ */
 
         document
             .getElementById("modal")
-            .addEventListener("click", function(event) {
+            .addEventListener(
+                "click",
+                function(event) {
 
-                if (event.target === this) {
+                    if (
+                        event.target === this
+                    ) {
+
+                        cerrarModal();
+
+                    }
+
+                }
+            );
+
+
+        /* ===============================
+           ESCAPE PARA CERRAR
+        ================================ */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
 
                     cerrarModal();
 
                 }
 
-            });
+            }
+        );
 
 
-
-        /* =========================
+        /* ===============================
            ANIMACIONES AL HACER SCROLL
-        ========================== */
+        ================================ */
 
         const elementos =
             document.querySelectorAll(".reveal");
@@ -2562,36 +2788,47 @@
 
                 (entradas) => {
 
-                    entradas.forEach(entrada => {
+                    entradas.forEach(
+                        entrada => {
 
-                        if (entrada.isIntersecting) {
+                            if (
+                                entrada.isIntersecting
+                            ) {
 
-                            entrada.target.classList.add("visible");
+                                entrada.target
+                                    .classList
+                                    .add("visible");
+
+                                observer.unobserve(
+                                    entrada.target
+                                );
+
+                            }
 
                         }
-
-                    });
+                    );
 
                 },
 
                 {
-                    threshold: 0.12
+                    threshold: .08
                 }
 
             );
 
 
-        elementos.forEach(elemento => {
+        elementos.forEach(
+            elemento => {
 
-            observer.observe(elemento);
+                observer.observe(elemento);
 
-        });
+            }
+        );
 
 
-
-        /* =========================
+        /* ===============================
            FORMULARIO
-        ========================== */
+        ================================ */
 
         function enviarFormulario(event) {
 
@@ -2605,7 +2842,10 @@
 
     </script>
 
-
 </body>
 
 </html>
+```
+
+
+
